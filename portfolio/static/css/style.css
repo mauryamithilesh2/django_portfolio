@@ -1,0 +1,139 @@
+
+
+body {
+
+    --bs-bg-opacity: 1;
+    background-color:rgba(21, 17, 17)!important;
+}
+
+.rgt {
+    display: flex;
+    justify-content: flex-end; /* Aligns the container to the right */
+}
+
+.navbar-nav .nav-link:hover{
+    font-size: 22px;
+    color:yellow;
+
+}
+
+/* .navbar-nav .nav-link{
+    font-size: 20px;
+    background: #9f8181;
+    
+} */
+
+    
+
+.navbar-brand{
+    font-size: 25px;
+}
+
+
+
+.inline-container {
+    display: inline-block;
+    position: relative;    
+}
+
+.moving-line {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px; 
+}
+
+.moving-line::after {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 0; /* Start with no width */
+    height: 2px;
+    background-color: yellow; /* Color of the line */
+    transition: width 0.4s ease; /* Smooth transition for width */
+}
+
+.moving-line:hover::after {
+    width: 100%; /* Expand the width on hover */
+}
+
+.circular-image-container{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 12px solid rgb(234, 234, 62);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 10px 20px rgba(183, 183, 120, 0.7);
+}
+.circular-image{
+    height: auto;
+    width: 120%;
+    display: block;
+}
+
+.title{
+    color:blue;
+}
+.name{
+ color:white
+}
+
+.social{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid gray;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.about_image{
+    width: 200px;
+    height: 200px;
+    display: block;
+}
+
+.jumbotron{
+background-color:rgba(21, 17, 17);
+padding:20px;
+border-radius:10px;
+color: rgb(229, 248, 248);
+}
+
+.display4{
+    color:#eef3f8;
+    font-size: 24px;
+}
+
+.lead{
+    font-size: 18px;
+    color:#28a745;
+}
+
+
+.form-container{
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+
+
+
+
+
+.bg-contact{
+    --bs-bg-opacity: 1;
+    background-color:rgba(21, 17, 17)
+}
+
+
+/* for moving line after each section */
+
