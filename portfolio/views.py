@@ -38,10 +38,10 @@ def home_view(request):
 
 # for access project 
     project_list=[{"title":"DriveMart",
-         'path':'images/myself.jpg',},{
+         "path":"images/drivemart.png",},{
          "title":"TempTeller",
-         "path":"images/",},{
-         "title":"Crudify",
+         "path":"images/tempteller.png",},
+         {"title":"Crudify",
          "path":"images/",},{
          "title":"Portfolio",
          "path":"images/portfolio.png",}]
