@@ -43,15 +43,34 @@
      
 
         <!--About section  start-->
-        <div class="row d-flex align-items-center my-5 ">
+        <br>
+        <div class="row my-5">
 
-            <div class="col-xl-5 offset-xl-1 col-md-5 offset-md-1 col-lg-5 offset-lg-1  col-12 mt-5">
+            <div class="col-md-12 col-lg-12 mt-5">
+                <h2 class="text-center" style="color: pink"> <span class=" text-warning moving-line">Education</span></h2>
+                </br>
+                <div class="d-flex flex-column align-items-center gap-3">
 
-                <div class="circular-image-container mt-5 ">
-                    <img src="{% static 'images/myself.jpg' %}" alt="square"
-                        class="img-fluid w-100 d-none d-lg-block d-md-block circular-image ">
+                    <p class="mb-6 lead text-light moving-line">
+                        <b>Undergraduation : </b> Dr.A.P.J abdul Kalam Technical University (Computer Science And
+                        Engineering)
+                    </p>
+
                 </div>
 
+            </div>
+        </div>
+
+
+        <div class="row d-flex align-items-center my-5 ">
+
+           
+
+            <div class="col-xl-5 offset-xl-1 col-lg-5 offset-lg-1 col-md-6 col-12 mt-5 text-center">
+                <div class="circular-image-container mt-5">
+                    <img src="{% static 'images/myself.jpg' %}" alt="Profile"
+                        class="img-fluid circular-image d-block mx-auto">
+                </div>
             </div>
 
             <div class="col-xl-5 col-md-6  col-lg-6 col-12 mt-5">
@@ -94,23 +113,8 @@
             </div>
         </div>
 
-        <div class="row my-5">
-
-            <div class="col-md-12 col-lg-12 mt-5">
-                <h2 class="text-center" style="color: pink"> <span class=" text-warning moving-line">Education</span></h2>
-                </br>
-                <div class="d-flex flex-column align-items-center gap-3">
-
-                    <p class="mb-6 lead text-light moving-line">
-                        <b>Undergraduation : </b> Dr.A.P.J abdul Kalam Technical University (Computer Science And
-                        Engineering)
-                    </p>
-
-                </div>
-
-            </div>
-        </div>
-
+       
+         <br><br>
         <div class="row my-5">
             <div class="col-md-6 col-lg-6 mt-5">
                 <h2 class="text-center" style="color: pink"><span class=" text-warning moving-line">Technical Skills</span></h2>
@@ -180,18 +184,19 @@
     {% comment %} {% block 'projects' %}{% endblock %} {% endcomment %}
 
 <!--project section start here-->
-
+<br>
 <div class="row text-center mt-3">
   <h2 class="mb-5 text-warning"><span class=" text-warning moving-line">Projects</span></h2>
 </div> 
 
-
+<br>
 <div class="container">
   <div class="row justify-content-center">
     {% for project in project_list %}<br><br>
     <div class="col-md-5 col-lg-5 m-2">
-      <h4 class="text-center text-warning">{{ project.title }}</h4><br>
-      <img src="{% static project.path %}" alt="" height="400" width="500" class="d-block mx-auto">
+        <h4 class="text-md-center text-start text-warning">{{ project.title }}</h4>
+        <br>
+        <img src="{% static project.path %}" alt="{{ project.title }}" class="img-fluid mx-auto d-block">
     </div>
     {% endfor %}
   </div>
@@ -239,10 +244,14 @@
 <div class="container">
     <div class="row justify-content-center">
       {% for certificate in certificates %}
+
       <div class="col-md-5 col-lg-5 m-2"><br><br>
-        <h4 class="text-center text-warning">{{ certificate.title }}</h4><br>
-        <img src="{% static certificate.path %}" alt="" height="400" width="500" class="d-block mx-auto">
-      </div>
+        <h4 class="text-md-center text-start text-warning">{{ certificate.title }}</h4>
+        <br>
+        <img src="{% static certificate.path %}" alt="{{ certificate.title }}" class="img-fluid mx-auto d-block">
+    </div>
+
+
       {% endfor %}
     </div>
   </div>
