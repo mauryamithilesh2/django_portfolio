@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib.staticfiles.storage import staticfiles_storage   # it is for pdf download which save in statuic folder
 from .forms import ClientForm
+
+
 def home_view(request):
     certificates=[
         {
@@ -33,26 +35,41 @@ def home_view(request):
          "path":"images/cloud.jpg"
         }
         ]
-    # form attributes import from models
-    form=ClientForm
+    
 
 # for access project 
-    project_list=[{"title":"DriveMart",
-         "path":"images/drivemart.png",},{
+    project_list=[
+        {
+        "title":"DriveMart",
+         "path":"images/drivemart.png",
+         "link":"https://github.com/mauryamithilesh2/drivemark",},
+         {
          "title":"TempTeller",
-         "path":"images/tempteller.png",},
-         {"title":"Crudify",
-         "path":"images/",},{
+         "path":"images/tempteller.png",
+         "link":"https://github.com/mauryamithilesh2/weatherApi",},
+         {
+        "title":"Crudify",
+         "path":"images/",
+         "link":"https://github.com/mauryamithilesh2/django_portfolio",},
+         {
          "title":"Portfolio",
-         "path":"images/portfolio.png",}]
+         "path":"images/portfolio.png",
+         "link":"https://github.com/mauryamithilesh2/django_portfolio",}]
     
+    # form attributes import from models
+    if request.method == "POST":
+        form=ClientForm(request.POST)
+        if form.is_valid():
+            form.save()  # Save form data to the database
+            return redirect('home')  # Reload the home page after submission
+        # else:
+        #     print("❌ Form Errors:", form.errors)
+    
+    else:
+        form = ClientForm()
+   
     experiences=[{"Company":"SoftPro India,Lucknow","position":"Intern as Both client and server side"},{"Company":"","position":""},{"Company":"","position":""},{ "Company":"","position":""}]
-    return render(request,'home.html',{"certificates":certificates,'form':form,"project_list":project_list,"experiences":experiences})
-
-
-
-
-
+    return render(request,'home.html',{"form":form,"certificates":certificates,"project_list":project_list,"experiences":experiences})
 
 
 
@@ -71,6 +88,7 @@ def resume_view(request):
     else:
         return HttpResponse("Not available")    
     
+
 
 
 
