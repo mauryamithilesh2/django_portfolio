@@ -73,8 +73,15 @@
                 <div class="d-flex flex-column align-items-center gap-3">
 
                     <p class="mb-6 lead text-light moving-line">
-                        <b>Undergraduation : </b> Dr.A.P.J abdul Kalam Technical University (Computer Science And
-                        Engineering)
+                        <b class="fw-bold">Undergraduation : </b> At present I'm persuing B.Tech specialization in Computer Science And
+                        Engineering<br> from RR group of Modern Institute (AKTU),Lucknow. 
+                    </p>
+                    <p class="mb-6 lead text-light moving-line">
+                        <b class="fw-bold">Intermediate : </b> Jawahar Navodaya Vidyalaya (Gorakhpur)<br>
+                        PCM with <b> 87.2% </b>
+                    </p>
+                    <p class="mb-6 lead text-light moving-line">
+                        <b class="fw-bold">HighSchool : </b> Jawahar Navodaya Vidyalaya (Gorakhpur)<br><b>95%</b>
                     </p>
 
                 </div>
@@ -87,7 +94,7 @@
 
 
 
-            <div class="col-xl-5 offset-xl-1 col-lg-5 offset-lg-1 col-md-6 col-12 mt-5 text-center">
+            <div class="col-xl-5 offset-xl-1 col-lg-5 offset-lg-1 col-md-6  mt-5 text-center">
                 <div class="circular-image-container mt-5">
                     <img src="{% static 'images/myself.jpg' %}" alt="Profile"
                         class="img-fluid circular-image d-block mx-auto">
@@ -111,7 +118,12 @@
                             leadership and technical problem-solving skills. Seeking to plan, manage, and execute
                             complex
                             projects in a team environment. {% endcomment %}
-                            description menton here
+                            I am passionate about Data Structures and Algorithms (DSA) in C++, web development with Django.
+                            My journey so far has been enriched by hands-on experience, including a summer internship 
+                            and many real world feature rich web applications(Drivemart,tempteller,portfolio website)
+                            where I contributed as a client-side web developer to create scalable and interactive web applications. 
+                            I’m now eager to explore into the fields of Artificial Intelligence (AI) and data analysis, 
+                            aiming to apply my skills in innovative ways.
                         </p>
                         </br>
                         <p class="mb-6 lead text-light moving-line">
@@ -121,7 +133,9 @@
                             leadership and technical problem-solving skills. Seeking to plan, manage, and execute
                             complex
                             projects in a team environment. {% endcomment %}
-                            another description menton here
+                           <b class="fw-bold"> My Key Skills & Interests</b>
+                            C++ Programming: Specializing in algorithm optimization and advanced problem-solving.
+                            Django Development: Building robust, scalable, and user-friendly web applications.
                         </p>
                     </div>
 
@@ -133,7 +147,7 @@
 
         <br><br>
         <div class="row my-5">
-            <div class="col-md-6 col-lg-6 mt-5">
+            <div class="col-md-4 col-lg-4 mt-4">
                 <h2 class="text-center" style="color: pink"><span class=" text-warning moving-line">Technical
                         Skills</span></h2>
                 </br>
@@ -154,7 +168,29 @@
             </div>
 
 
-            <div class="col-md-6 col-lg-6 mt-5">
+            <div class="col-md-4 col-lg-4 mt-4">
+                <h2 class="text-center" style="color: pink"><span class=" text-warning moving-line">Tools</span>
+                </h2>
+                </br>
+                <div class="d-flex flex-column align-items-center gap-3">
+                    </br>
+                    </br>
+
+                    <p class="mb-6 lead text-light moving-line">
+                       Replit
+                    </p>
+
+                    <p class="mb-6 lead text-light moving-line">
+                        Github
+                    </p>
+
+                    <p class="mb-6 lead text-light moving-line">
+                        VS Code
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-4 mt-4">
                 <h2 class="text-center" style="color: pink"><span class=" text-warning moving-line">Soft Skills</span>
                 </h2>
                 </br>
@@ -162,31 +198,21 @@
                     </br>
                     </br>
 
-
-
-
                     <p class="mb-6 lead text-light moving-line">
-                        description menton here
+                       Problem-Solving
                     </p>
 
                     <p class="mb-6 lead text-light moving-line">
-                        Problem Solving
+                        Leadership
                     </p>
 
+                    <p class="mb-6 lead text-light moving-line">
+                        Time Management
+                    </p>
                     <p class="mb-6 lead text-light moving-line">
                         Collaborative
                     </p>
-
-                    <p class="mb-6 lead text-light moving-line">
-                        Communication
-                    </p>
-
-                    <p class="mb-6 lead text-light moving-line">
-                        description menton here
-                    </p>
-
                 </div>
-
             </div>
 
         </div>
@@ -227,7 +253,8 @@
                              onmouseover="this.parentElement.querySelector('a').style.opacity='1';
                              this.style.transform='scale(1.1)';
                               this.style.boxShadow='0px 0px 30px rgba(209, 205, 205, 0.5)';"
-                             onmouseout="this.parentElement.querySelector('a').style.opacity='0';this.style.transform='scale(1)';this.style.boxShadow='none';">
+                             onmouseout="this.parentElement.querySelector('a').style.opacity='0';this.style.transform='scale(1)';this.style.boxShadow='none';"
+                            >
                         
                         <!-- Link appearing on hover -->
                         <a href="{{ project.link }}" target="_blank"
@@ -240,7 +267,8 @@
                                   onmouseout="this.style.opacity='1';">
                            Github-link
                         </a>
-                    </div>
+                    </div><br>
+                    <p class="text-light fw-bold">{{project.discription}}</p> <br><br>
             </div>
             {% endfor %}
         </div>
@@ -264,11 +292,21 @@
     <div class="row my-2">
 
         {% for experience in experiences %}
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-4">{{experience.Company}}</h1>
-                <p class="lead">T{{experience.position}}.</p>
+        <div class="col-md-9 col-lg-9 mx-auto">
+            <h3 class="display-4 text-light fw-bold">{{experience.work}}<hr class="border border-light"></h3>
+            <div class=" justify-content-center">
+                <h4 class="display-5  text-light ">{{experience.position}}</h4>
+                <span class="text-light fw-bold border-bottom ">{{experience.Company}}</span>
+                <p class="offset-xl-1 offset-lg-1 text-light"> •	Work on Online Admission System for BioTech Park, Lucknow,<br>
+                    •	Collaborated with cross-functional teams to deliver a user-friendly and scalable web application.
+                    </p>
             </div>
+            {% comment %} <h3 class="display-4 text-light fw-bold">{{experience.work}}</h3>
+            <div class=" justify-content-center">
+                <h4 class="display-5  text-light ">{{experience.position}}</h4>
+                <p class="text-light fw-bold ">{{experience.Company}}</p><br>
+            </div> {% endcomment %}
+           
         </div>
         {% endfor %}
 
@@ -283,8 +321,8 @@
     {% comment %} {% block 'certificate' %}
     {% endblock %} {% endcomment %}
     <section id="certificate">
-    <div class="row text-center mt-3">
-        <h2 class="mb-5 text-warning"><span class=" text-warning moving-line">Certificates</span></h2>
+    <div class="row text-center mt-5 ">
+        <h2 class="my-5 text-warning"><span class=" text-warning moving-line">Certificates</span></h2>
     </div>
 
     <div class="container">
@@ -353,7 +391,7 @@
 
 
         {% comment %} for form {% endcomment %}
-        <div class="col-5 mx-auto mt-2  mb-5">
+        {% comment %} <div class="col-5 mx-auto mt-2  mb-5">
             <div class="container form-container bg-dark text-light border-0 shadow-none p-4">
                <form method="post" action="" class="border-0">
                     {% csrf_token %}
@@ -363,7 +401,7 @@
                 
             </div>
 
-        </div>
+        </div> {% endcomment %}
     </div>
     </section>
 
@@ -371,7 +409,7 @@
 
 
     <!--contact section end-->
-    <hr style="border: 2px solid #333; background-color:rgba(21, 17, 17);">
+    {% comment %} <hr style="border: 2px solid #333; background-color:rgba(21, 17, 17);"> {% endcomment %}
 
 
 
@@ -390,16 +428,12 @@
                 <a href="https://github.com/mauryamithilesh2" target="_blank" class="mx-3">
                     <img src="{% static 'images/github.png' %}" width="50" height="50" class="social" />
                 </a>
-
-                <a href="https://www.linkedin.com/in/mithileshmaurya20" target="_blank" class="mx-3">
-                    <img src="{% static 'images/linkedin.png' %}" width="50" height="50" class="social" />
-                </a>
             </div>
         </div>
-        <footer class="footer px-5 py-2 fixed-bottom">
+        <footer class="footer  py-2 fixed-bottom">
             <div class="copyright mx-auto float-none text-center text-light mb-0">
 
-                <span class="bg-dark"> &copy; All right reserved. By Mithilesh</span>
+                <span class="bg-dark"> &copy; Made. By Mithilesh</span>
 
             </div>
         </footer>

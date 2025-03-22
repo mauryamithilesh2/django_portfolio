@@ -42,34 +42,29 @@ def home_view(request):
         {
         "title":"DriveMart",
          "path":"images/drivemart.png",
+         "discription":" A marketplace for all types of vehicles are available on rent.",
          "link":"https://github.com/mauryamithilesh2/drivemark",},
          {
          "title":"TempTeller",
          "path":"images/tempteller.png",
+         "discription":"A web app that fetches real-time temperature data for different cities using a weather API.",
          "link":"https://github.com/mauryamithilesh2/weatherApi",},
          {
         "title":"Crudify",
          "path":"images/",
+         "discription":"Implemented CRUD operations (Create, Read, Update, Delete)",
          "link":"https://github.com/mauryamithilesh2/django_portfolio",},
          {
          "title":"Portfolio",
          "path":"images/portfolio.png",
+         "discription":"Personal Portfolio Website",
          "link":"https://github.com/mauryamithilesh2/django_portfolio",}]
     
-    # form attributes import from models
-    if request.method == "POST":
-        form=ClientForm(request.POST)
-        if form.is_valid():
-            form.save()  # Save form data to the database
-            return redirect('home')  # Reload the home page after submission
-        # else:
-        #     print("❌ Form Errors:", form.errors)
     
-    else:
-        form = ClientForm()
    
-    experiences=[{"Company":"SoftPro India,Lucknow","position":"Intern as Both client and server side"},{"Company":"","position":""},{"Company":"","position":""},{ "Company":"","position":""}]
-    return render(request,'home.html',{"form":form,"certificates":certificates,"project_list":project_list,"experiences":experiences})
+    experiences=[{"work":"Internship","Company":"SoftPro India,Lucknow","position":"Intern as Both client and server side"},
+                 ]
+    return render(request,'home.html',{"certificates":certificates,"project_list":project_list,"experiences":experiences})
 
 
 
