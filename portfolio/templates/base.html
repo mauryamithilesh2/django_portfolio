@@ -16,7 +16,7 @@
     <nav class="navbar navbar-expand-lg  sticky-md-top border-bottom border-warning">
         <div class="container-fluid ">
             <a class="navbar-brand" style="padding-right:240px;" href="{% url 'home' %}"><img
-                    src="{% static 'images/mithilesh.png' %}" alt="" height="40" width="150" class="bg-info opacity-30"></a>
+                    src="{% static 'images/mithilesh.png' %}" alt="" height="40" width="150" class="logo-bg"></a>
             <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -66,15 +66,15 @@
             </div>
             </br>
             
-            <div class="col-md-12 col-lg-12 mt-5">
-                <h2 class="text-center" style="color: pink"> <span class=" text-success moving-line">Education</span>
+            <div class="col-md-12 col-lg-12 mt-4 mt-3 box-round box text-white">
+                <h2 class="text-center" style="color: dark"> <span class=" text-success moving-line">Education</span>
                 </h2>
                 </br>
                 <div class="d-flex flex-column align-items-center gap-3">
 
-                    <p class="mb-6 lead text-light moving-line">
+                    <p class="mb-6 lead text-light moving-line d-flex justify-content-center p-5">
                         <b class="fw-bold">Undergraduation : </b> At present I'm persuing B.Tech specialization in Computer Science And
-                        Engineering<br> from RR group of Modern Institute (AKTU),Lucknow. 
+                        Engineering<br> from RR Institute of Modern Technology (AKTU),Lucknow. 
                     </p>
                     <p class="mb-6 lead text-light moving-line">
                         <b class="fw-bold">Intermediate : </b> Jawahar Navodaya Vidyalaya (Gorakhpur)<br>
@@ -90,11 +90,11 @@
         </div>
 
 
-        <div class="row d-flex align-items-center my-5 ">
+        <div class="row d-flex align-items-center my-5 box-round1 box text-white p-5">
 
 
 
-            <div class="col-xl-5 offset-xl-1 col-lg-5 offset-lg-1 col-md-6  mt-5 text-center">
+            <div class="col-xl-5 offset-xl-1 col-lg-5 offset-lg-1 col-md-6  mt-3 text-center">
                 <div class="circular-image-container mt-5">
                     <img src="{% static 'images/myself.jpg' %}" alt="Profile"
                         class="img-fluid circular-image d-block mx-auto">
@@ -111,7 +111,7 @@
                         {% comment %} title {% endcomment %}
 
 
-                        <p class="mb-6 lead text-light moving-line">
+                        <p class="mb-6 lead text-light moving-line d-flex justify-content-center">
                             {% comment %} Enthusiastic, self-motivated, reliable, and hardworking software developer
                             with
                             expertise in Django . Works well under pressure while demonstrating strong
@@ -126,7 +126,7 @@
                             aiming to apply my skills in innovative ways.
                         </p>
                         </br>
-                        <p class="mb-6 lead text-light moving-line">
+                        <p class="mb-6 lead text-light moving-line d-flex justify-content-center">
                             {% comment %} Enthusiastic, self-motivated, reliable, and hardworking software developer
                             with
                             expertise in Django . Works well under pressure while demonstrating strong
@@ -146,7 +146,7 @@
 
 
         <br><br>
-        <div class="row my-5 ">
+        <div class="row my-5  box-round box text-white p-5">
             <div class="col-md-4 col-lg-4 mt-4">
                 <h2 class="text-center" style="color: pink"><span class=" text-warning moving-line">Technical
                         Skills</span></h2>
@@ -286,10 +286,10 @@
 
     <br><br><br>
     <section id="experience">
-    <div class=" text-center mt-3">
+    <div class=" text-center mt-3 ">
         <h2 class="mb-5 text-warning">Experience</h2>
     </div>
-    <div class=" my-2">
+    <div class=" my-2 box-round1 box text-white p-5">
 
         {% for experience in experiences %}
         <div class="col-md-9 col-lg-9 mx-auto ">
