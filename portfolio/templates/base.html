@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg  sticky-md-top ">
+<body >
+    <nav class="navbar navbar-expand-lg  sticky-md-top border-bottom border-warning">
         <div class="container-fluid ">
             <a class="navbar-brand" style="padding-right:240px;" href="{% url 'home' %}"><img
-                    src="{% static 'images/mithilesh.png' %}" alt="" height="40" width="150" class="bg-light"></a>
+                    src="{% static 'images/mithilesh.png' %}" alt="" height="40" width="150" class="bg-info opacity-30"></a>
             <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -54,7 +54,7 @@
     </nav>
 
     <section id="about">
-    <div class="container">
+    <div class="container ">
         {% block 'main_section' %}{% endblock %} <br><br> <!--landing page-->
 
 
@@ -101,7 +101,7 @@
                 </div>
             </div>
 
-            <div class="col-xl-5 col-md-6  col-lg-6 col-12 mt-5">
+            <div class="col-xl-5 col-md-6  col-lg-6 col-12 mt-5 ">
 
                 <div class="inline-container ">
 
@@ -146,23 +146,23 @@
 
 
         <br><br>
-        <div class="row my-5">
+        <div class="row my-5 ">
             <div class="col-md-4 col-lg-4 mt-4">
                 <h2 class="text-center" style="color: pink"><span class=" text-warning moving-line">Technical
                         Skills</span></h2>
                 </br>
                 <div class="d-flex flex-column align-items-center gap-3">
 
-                    <img src="{% static 'images/html5.png' %}" alt="" height="50" width="50" class="img-fluid" />
+                    <img src="{% static 'images/html5.png' %}" alt="" height="70" width="70" class="img-fluid" />
 
-                    <img src="{% static 'images/css.jpg' %}" alt="" height="50" width="50" class="img-fluid" />
-                    <img src="{% static 'images/cpp.png' %}" alt="" height="50" width="50" class="img-fluid" />
+                    <img src="{% static 'images/css.jpg' %}" alt="" height="70" width="70" class="img-fluid" />
+                    <img src="{% static 'images/cpp.png' %}" alt="" height="70" width="70" class="img-fluid" />
 
-                    <img src="{% static 'images/js.webp' %}" alt="" height="50" width="50" class="img-fluid" />
+                    <img src="{% static 'images/js.webp' %}" alt="" height="70" width="70" class="img-fluid" />
 
-                    <img src="{% static 'images/pythonimg.png' %}" alt="" height="50" width="50" class="img-fluid" />
-                    <img src="{% static 'images/django.png' %}" alt="" height="50" width="50" class="img-fluid" />
-                    <img src="{% static 'images/sql.webp' %}" alt="" height="50" width="50" class="img-fluid" />
+                    <img src="{% static 'images/pythonimg.png' %}" alt="" height="70" width="70" class="img-fluid" />
+                    <img src="{% static 'images/django.png' %}" alt="" height="70" width="70" class="img-fluid" />
+                    <img src="{% static 'images/sql.webp' %}" alt="" height="70" width="70" class="img-fluid" />
                 </div>
 
             </div>
@@ -220,11 +220,11 @@
 
     </div>
     </section>
-    <hr style="border: 2px solid #333; background-color: rgba(21, 17, 17);">
+   
 
 
     <!--aabout section end-->
-    <span class=" text-warning moving-line">
+    <span class=" text-warning moving-line ">
         <hr class="border">
     </span>
 
@@ -233,12 +233,12 @@
     <!--project section start here-->
     <br>
     <section id="project">
-    <div class="row text-center mt-3">
+    <div class=" text-center mt-3 ">
         <h2 class="mb-5 text-warning"><span class=" text-warning moving-line">Projects</span></h2>
     </div>
 
     <br>
-    <div class="container">
+    <div class="container ">
         <div class="row justify-content-center">
             {% for project in project_list %}<br><br>
             <div class="col-md-5 col-lg-5 m-2 text-center">
@@ -276,23 +276,23 @@
     </section>
     <!--project section end here-->
 
-    <hr style="border: 2px solid #333; background-color:rgba(21, 17, 17);">
+    
 
 
-    {% comment %} {% block 'experience' %}{% endblock %} {% endcomment %}
+   
 
 
     <!--experience section start here-->
 
     <br><br><br>
     <section id="experience">
-    <div class="row text-center mt-3">
+    <div class=" text-center mt-3">
         <h2 class="mb-5 text-warning">Experience</h2>
     </div>
-    <div class="row my-2">
+    <div class=" my-2">
 
         {% for experience in experiences %}
-        <div class="col-md-9 col-lg-9 mx-auto">
+        <div class="col-md-9 col-lg-9 mx-auto ">
             <h3 class="display-4 text-light fw-bold">{{experience.work}}<hr class="border border-light"></h3>
             <div class=" justify-content-center">
                 <h4 class="display-5  text-light ">{{experience.position}}</h4>
@@ -321,12 +321,12 @@
     {% comment %} {% block 'certificate' %}
     {% endblock %} {% endcomment %}
     <section id="certificate">
-    <div class="row text-center mt-5 ">
+    <div class=" text-center mt-5 ">
         <h2 class="my-5 text-warning"><span class=" text-warning moving-line">Certificates</span></h2>
     </div>
 
-    <div class="container">
-        <div class="row justify-content-center">
+    <div class="container ">
+        <div class="row justify-content-center ">
             {% for certificate in certificates %}
 
             <div class="col-md-5 col-lg-5 m-2"><br><br>
@@ -350,17 +350,17 @@
     </div>
     </section>
 
-    <hr style="border: 2px solid #333; background-color:rgba(21, 17, 17);">
+    
 
 
     {% comment %} {% block 'contact' %} {% endblock %} {% endcomment %}
     <!--contact section start-->
     <section id="contact">
-    <div class="row text-center mt-2">
+    <div class=" text-center mt-5">
         <h2 class="mb-5 text-warning"><span class=" text-warning moving-line">Contact Us</span></h2>
     </div>
-    <div class="row my-2">
-        <div class="col-md-5 col-lg-5  my-5 text-light mx-auto bg-contact">
+    <div class=" my-5 ">
+        <div class="col-md-5 col-lg-5  my-5 text-light mx-auto bg-contact ">
             <table class="table table-striped table-hover ">
                 <tbody class="table-dark">
 
@@ -414,7 +414,7 @@
 
 
     
-    <div class="row  float-start fixed-bottom">
+     <div class="sticky-bottom ">
         {% comment %} <div class="col-6 d-flex justify-content-center align-items-center"> {% endcomment %}
             <div class="col-1 d-flex flex-column gap-3 mb-5">
                 <a href="https://www.linkedin.com/in/mithileshmaurya20" target="_blank" class="mx-3">
@@ -429,8 +429,8 @@
                     <img src="{% static 'images/github.png' %}" width="50" height="50" class="social" />
                 </a>
             </div>
-        </div>
-        <footer class="footer  py-2 fixed-bottom">
+     </div>
+        <footer class="footer  py-2 sticky-bottom ">
             <div class="copyright mx-auto float-none text-center text-light mb-0">
 
                 <span class="bg-dark"> &copy; Made. By Mithilesh</span>
