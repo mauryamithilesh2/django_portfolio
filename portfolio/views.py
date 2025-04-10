@@ -73,12 +73,12 @@ def home_view(request):
 
 
 def resume_view(request):
-    resume_path="resumefolder/Resume_N.pdf"
+    resume_path="resumefolder/RESUME_UP0.pdf"
     resume_path=staticfiles_storage.path(resume_path)
     if staticfiles_storage.exists(resume_path):
         with open(resume_path,"rb") as resume_file:
             response = HttpResponse(resume_file.read(),content_type="application/pdf")
-            response['content-Disposition']='attachment';filename="Resume_N.pdf"
+            response['content-Disposition']='attachment';filename="RESUME_UP0.pdf"
             return response
     else:
         return HttpResponse("Not available")    
