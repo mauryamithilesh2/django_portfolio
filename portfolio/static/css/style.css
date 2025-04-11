@@ -1,5 +1,6 @@
 
 
+
 /*  
 body {
     margin: 0;
@@ -23,14 +24,14 @@ body {
     transition: background 0.5s ease;
   }
 
-
   #vanta-bg {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    z-index: -1;
     top: 0;
     left: 0;
+    z-index: -1;
+    
   }
   
   /* Cursor */
@@ -207,9 +208,10 @@ body {
     align-items: center;
     box-shadow: 0px 10px 20px rgba(183, 183, 120, 0.7);
 }
-.circular-image{
-    height: auto;
-    width: 120%;
+
+.circular-image {
+  width: 100%;
+  max-width: 100%;
     display: block;
 }
 
@@ -349,6 +351,13 @@ background: radial-gradient(circle, rgba(0,21,36,1) 0%, rgba(0,212,255,1) 15%, r
     border-radius: 12px;
     cursor: pointer;
   }
+  @media (max-width: 768px) {
+    .skill-effect .d-flex img:hover {
+      transform: none !important;
+      box-shadow: none !important;
+    }
+  }
+  
   
   .skill-effect .d-flex img:hover {
     transform: scale(1.2) translateY(-10px);
