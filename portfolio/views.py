@@ -62,9 +62,9 @@ def home_view(request):
     
     
    
-    experiences=[{"work":"Internship","Company":"SoftPro India,Lucknow","position":"Intern as Both client and server side"},
-                 ]
-    return render(request,'home.html',{"certificates":certificates,"project_list":project_list,"experiences":experiences})
+   
+                 
+    return render(request,'home.html',{"certificates":certificates,"project_list":project_list})
 
 
 
